@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    font-family: "Nunito", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D91656;
+    min-height:100vh;
+}
+.container{
+    width:850px;
+    background-color:#EE66A6 ;
+    display: flex;
+    gap:70px;
+    padding:60px;
+    border-radius: 10px;
+    border:solid 2px transparent;
+    align-items: flex-end;
+
+}
+.hangman-box img{
+    max-width: 270px;
+}
+.hangman-box h1{
+    font-size:1.45rem;
+    margin-top: 20px;
+    text-align: center;
+}
+.word-display{
+    display: flex;
+    gap:20px;
+    list-style: none;
+    align-items: center;
+    justify-content:center ;
+
+}
+.word-display .letter{
+    width:28px;
+    border-bottom: 3px solid black;
+    margin-bottom:40px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+.word-display .letter.guessed{
+    border-color: transparent;
+    margin:-40px 0px 15px;
+}
+.game-box h4{
+    text-align:center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;;
+}
+
+.game-box h4 b{
+    font-weight:600;
+}
+.game-box .guess-text b {
+    color:red;
+    font-weight: 900;
+    
+}
+.game-box .keyboard{
+    display: flex;
+
+}
+.keyboard button{
+    width
+}

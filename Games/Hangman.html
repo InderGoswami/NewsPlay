@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="Hangman.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="hangman-box">
+            <img src="Assets/hangman-game-images/images/hangman-0.svg" alt="">
+            <h1>Hangman</h1>
+        </div>
+        <div class="game-box">
+            <ul class="word-display">
+                <li class="letter guessed">z</li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+                <li class="letter"></li>
+            </ul>
+            <h4 class="hint-text">
+                Hint:
+                <b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, soluta!</b>
+            </h4>
+            <h4 class="guess-text">
+                Incorrect Guesses:
+                <b>0/6</b>
+            </h4>
+            <div id="keyboard">
+                
+  
+
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        function createButtons() {
+            let buttonContainer = document.getElementById('keyboard');
+            
+            for (let i = 97; i <= 122; i++) {  // ASCII codes for 'a' to 'z'
+                let button = document.createElement('button');
+                button.textContent = String.fromCharCode(i);  // Set button label to the letter
+                buttonContainer.appendChild(button);  // Add button to the container
+            }
+        }
+
+        createButtons();  // Generate buttons on page load
+    </script>
+</body>
+</html>
