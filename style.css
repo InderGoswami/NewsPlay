@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root{
+    --primary-text-color:  #333333;;
+
+    --secondary-text-color:#666666;
+    --accent-color:#1E90FF;
+    --accent-color-dark:#0056b3;
+    --padding-inline-section:20px;
+}
+body{
+    font-family: "Gowun Batang";
+    font-size: 19px;
+    color:var(--primary-text-color)
+}
+p{
+    font-family: "DM Sans";
+    color:var(--secondary-text-color);
+    line-height:1.4rem;
+
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style:none;
+    justify-content: space-around;
+}
+.flex{
+    display:flex;
+    align-items:center;
+}
+.container{
+    max-width:1180px;
+    margin-inline:auto;
+    overflow: hidden;
+}
+nav{
+    background-color:#16325B ;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top:0;
+    z-index: 99;
+    left:0;
+    right:0;
+}
+.first-nav{
+    justify-content: space-between;
+    height:15vh;
+    background-color:white;
+}
+.main-nav{
+    justify-content: space-between;
+    padding:8px 0;
+
+}
+.utilities{
+    width:30%;
+    justify-content: space-between;
+    
+    /* background-color: #1E90FF; */
+   
+}
+.util{
+    justify-content: center;
+    align-items:center;
+    gap:5px;
+}
+.util i{
+    color:#227B94;
+    position: relative;
+    top:-4px;
+    font-weight: 900;
+}
+.util a{
+    font-size:20px ;
+    font-weight: 900;
+    color:#227B94;
+    transition:all ease 0.5s;
+}
+.util:hover a,
+.util:hover i {
+    color: #16325B;  /* Remember to add '#' for hex color values */
+    top: -2px;
+}
+
+.company{
+    width:30%;
+    
+}
+.company img{
+    width:50%;
+}
+.nav-links{
+    width:100%;
+    
+}
+.nav-links ul{
+    
+    justify-items:space-between;
+    
+}
+.nav-links li{
+    color:white;
+}
+.hover-link{
+    cursor: pointer;
+}
+.hover-link:hover{
+    color:white;
+
+}
+.hover-link:active{
+    color: #FFC107;
+}
+.search-bar{
+    width:30%;
+    height: 50px;
+    align-items: center;
+    gap:5px;
+    /* background-color: red; */
+
+}
+.search-bar input{
+    height: 100%;
+    width:60%;
+    font-size: large;
+    font-family: "Gowun Batang";
+    box-shadow: 0px 0px 1px black;
+
+
+}
+
+
+.search-btn{
+
+    height: 100%;
+    font-size: large;
+    background-color: var(--accent-color);
+    color: white;
+    padding:8px 24px;
+    border:none;
+    border-radius: 4px;
+    font-family: "DM Sans";
+    width:30%;
+}
+.search-btn:hover{
+    background-color: var(--accent-color-dark);
+    font-family: "DM Sans";
+}
+main{
+    padding-block: 20px;
+    margin-top:22vh;
+    
+}
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+.card{
+    width:360px;
+    min-height: 400px;
+    box-shadow:0 0 4px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    cursor:pointer;
+    background-color: #fff;
+    overflow:hidden;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    box-shadow:1px 1px 8px rgba(0, 0, 0, 1);
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+.card-header img{
+    width:100%;
+    height: 180px;
+    object-fit:cover;
+}
+.card-content{
+    padding:12px;
+
+}
+.news-source{
+    margin-block:12px;
+}
+
