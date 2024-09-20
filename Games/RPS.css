@@ -23,6 +23,27 @@ body{
     align-items: center;
     justify-content: center;
 }
+.container.start .user_res{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform:rotate(10deg) ;
+    }
+}
+.container.start .pc_res{
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+}
+.container.start .option_images{
+    pointer-events: none;
+}
+@keyframes userShake {
+    50%{
+        transform:rotate(-10deg) ;
+    }
+}
 .result_img img{
     width:150px;
    
@@ -47,7 +68,8 @@ body{
 .result{
     text-align:center;
     font-size: 2rem;
-    color:#A594F9;
+    color:#624E88;
+    
 }
 .option_image img{
     width:15%;
@@ -58,12 +80,28 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-top:20px;
+   
+    
+}
+
+.option_image img{
+    pointer-events: none;
+}
+
+.option_image.active{
+    opacity:1;
 }
 .option_image{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0.6;
+    transition: opacity 0.5 ease;
+    cursor: pointer;
+}
+.option_image:hover{
+    opacity:1;
 }
 .option_image p{
     color:#A594F9;
