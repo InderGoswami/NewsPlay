@@ -2,21 +2,74 @@
 * {
     font-family: "Nunito", sans-serif;
     margin: 0;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
+  
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
+nav{
+    
+        max-width: 100vw;
+    
+    
+    padding: 15px;
+    width:100%;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0,0,0,0.3);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+nav button{
+    width:50px;
+    height:50px;
+    text-align:center;
+    margin-right:20px;
+    font-size: large;
+    
+    color: white;
+   
+    border:solid black ;
+    border-radius: 50%;
+    color:#7BC9FF;
+    background-color: #8576FF;
+    font-family: "Nunito Sans", sans-serif;
+    transition: ease-in-out 0.5s 
+    
+}
+button:hover{
+    background-color:#7BC9FF ;
+    color:#8576FF;
+    cursor:pointer;
+}
+nav a img{
+    width:25%;
+    
+}
 body {
+    
+    min-height: 100vh;
+    background: url(/Games/Assets/snake/cute-snake-game-character-8m6scx5j8ivp9lcv.jpg); 
+    background-position: center;
+    background-size: cover;
+}
+main{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
 }
 
 .wrapper {
     width: 65vmin;
     height: 70vmin;
     background: #293447;
+    z-index: 1;
+    
 }
 
 .game-details {
@@ -25,7 +78,7 @@ body {
     font-weight: 500;
     padding: 20px 27px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .play-board {
@@ -44,4 +97,7 @@ body {
 .play-board .snake-head {
     background-color:chartreuse;
     
+}
+.score{
+    text-align: center;
 }

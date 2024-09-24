@@ -72,5 +72,5 @@ const changeDirection=(e)=>{
 
 // Change food position and re-render it
 changeFoodPosition();
-let id=setInterval(initGame,130);
+let id=setInterval(initGame,50);
 document.addEventListener("keydown",changeDirection);

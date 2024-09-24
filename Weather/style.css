@@ -151,7 +151,7 @@ forecast-items-container::-webkit-scrollbar-track{
     padding:10px;
     align-items: center;
     border-radius: 12px;
-    transition: 0.3s;
+    transition: 0.3s background;
 
 }
 .forecast-item img{
