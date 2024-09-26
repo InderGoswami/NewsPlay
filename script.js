@@ -30,4 +30,18 @@ function fillDataInCard(cardClone,article){
     cardClone.firstElementChild.addEventListener('click',()=>{
         window.open(article.url,"_blank");
     })
+
 }
+let currSelectedNav=null;
+function onNavItemClick(id){
+    fetchNews(id);
+    const navItem=document.getElementById(id);
+    currSelectedNav
+}
+const searchBtn=document.querySelector("#search-btn");
+const searchText=document.querySelector('.news-input').value;
+searchBtn.addEventListener('click',()=>{
+    const q=searchText;
+    if(!q) return;
+    fetchNews(q);
+});

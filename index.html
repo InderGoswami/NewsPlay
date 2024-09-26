@@ -24,7 +24,7 @@
             
             <div class="search-bar flex">
                 <input type="text" class="news-input" placeholder=" e.g Politics" name="" id="">
-                <button class="search-btn">Search</button>
+                <button id="search-btn" class="search-btn">Search</button>
             </div>
             <div class="utilities container flex">
                 
@@ -47,12 +47,12 @@
             <div class="nav-links">
                 <ul class="flex">
 
-                    <li class="nav-item hover-link" id="National" onclick="">National</li>
+                    <li class="nav-item hover-link" id="National" onclick="onNavItemClick('National')">National</li>
 
-                    <li class="nav-item hover-link" id="International">International</li>
-                    <li class="nav-item hover-link" id="Sports">Sports</li>
-                    <li class="nav-item hover-link" id="Entertainment">Entertainment</li>
-                    <li class="nav-item hover-link" id="Business">Business</li>
+                    <li class="nav-item hover-link" id="International" onclick="onNavItemClick('International')">International</li>
+                    <li class="nav-item hover-link" id="Sports" onclick="onNavItemClick('Sports')">Sports</li>
+                    <li class="nav-item hover-link" id="Entertainment" onclick="onNavItemClick('Entertainment')">Entertainment</li>
+                    <li class="nav-item hover-link" id="Business" onclick="onNavItemClick('Business')">Business</li>
                 </ul>
             </div>
 
