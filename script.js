@@ -1,6 +1,6 @@
 const API_KEY="d92e2f046a6c4998a4c3c3177d1d6eb9";
 const url="https://newsapi.org/v2/everything?q="
-window.addEventListener("load",()=>fetchNews("Punjab India"));
+window.addEventListener("load",()=>fetchNews("India"));
 async function fetchNews(query){
     const response=await fetch(`${url}${query}&apiKey=${API_KEY}`);
     const data=await response.json();
@@ -45,3 +45,31 @@ searchBtn.addEventListener('click',()=>{
     if(!q) return;
     fetchNews(q);
 });
+const jokeText=document.getElementById("joke-text");
+const jokeBtn=document.getElementById("joke-btn");
+async function getJoke() {
+    try {
+      const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      if(data.type==="single")
+    jokeText.textContent=`${data.joke}`;
+    else if(data.type==="twopart")
+        jokeText.textContent = `${data.setup} - ${data.delivery}`;
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+    }
+  }
+  document.addEventListener("DOMContentLoaded",getJoke())
+  jokeBtn.addEventListener("click",getJoke);
+  getJoke();
+  document.getElementById('joke-go').addEventListener('click', function() {
+    // Scroll to the bottom of the page
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    
+    });
+  });
