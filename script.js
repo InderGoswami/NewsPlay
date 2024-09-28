@@ -38,18 +38,19 @@ function onNavItemClick(id){
     const navItem=document.getElementById(id);
     currSelectedNav
 }
-const searchBtn=document.querySelector("#search-btn");
-const searchText=document.querySelector('.news-input').value;
-searchBtn.addEventListener('click',()=>{
-    const q=searchText;
-    if(!q) return;
-    fetchNews(q);
+const searchBtn = document.querySelector("#search-btn");
+
+searchBtn.addEventListener('click', () => {
+    const searchText = document.querySelector('.news-input').value; // Move this inside the click event
+    if (!searchText) return;
+    fetchNews(searchText);
 });
+
 const jokeText=document.getElementById("joke-text");
 const jokeBtn=document.getElementById("joke-btn");
 async function getJoke() {
     try {
-      const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+      const response = await fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
