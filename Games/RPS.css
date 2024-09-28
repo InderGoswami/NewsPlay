@@ -1,111 +1,555 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
+* {
     font-family: "Nunito", sans-serif;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
-    height: 100vh;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    background: #F5EFFF;
 
-}
-.container{
-    background:#E5D9F2;
-    padding:2rem 7rem;
-    border-radius: 10px;
-    width:50%;
-    box-shadow: 0px 0px 15px  #A594F9 ;
+body {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #F5EFFF;
 }
-.container.start .user_res{
+
+.container {
+    background: #E5D9F2;
+    padding: 2rem 7rem;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0px 0px 15px #A594F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container.start .user_res {
     transform-origin: left;
     animation: userShake 0.7s ease infinite;
 }
+
 @keyframes userShake {
-    50%{
-        transform:rotate(10deg) ;
+    50% {
+        transform: rotate(10deg);
     }
 }
-.container.start .pc_res{
+
+.container.start .pc_res {
     transform-origin: right;
     animation: userShake 0.7s ease infinite;
 }
-.container.start .option_images{
+
+.container.start .option_images {
     pointer-events: none;
 }
+
 @keyframes userShake {
-    50%{
-        transform:rotate(-10deg) ;
+    50% {
+        transform: rotate(-10deg);
     }
 }
-.result_img img{
-    width:150px;
-   
+
+.result_img img {
+    width: 150px;
 }
-.result_field{
-    width:80%;
-    
+
+.result_field {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
-.result_img{
+
+.result_img {
     display: flex;
     width: 100%;
-    gap:20%;
-    
-   
+    gap: 20%;
 }
-.user_res img{
+
+.user_res img {
     transform: rotate(90deg);
 }
-.pc_res img{
+
+.pc_res img {
     transform: rotate(-90deg) rotateY(180deg);
 }
-.result{
-    text-align:center;
+
+.result {
+    text-align: center;
     font-size: 2rem;
-    color:#624E88;
-    
+    color: #624E88;
 }
-.option_image img{
-    width:15%;
+
+.option_image img {
+    width: 15%;
 }
-.option_images{
-    width:100%;
+
+.option_images {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top:20px;
-   
-    
+    margin-top: 20px;
 }
 
-.option_image img{
+.option_image img {
     pointer-events: none;
 }
 
-.option_image.active{
-    opacity:1;
+.option_image.active {
+    opacity: 1;
 }
-.option_image{
+
+.option_image {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0.6;
-    transition: opacity 0.5 ease;
+    transition: opacity 0.5s ease;
     cursor: pointer;
 }
-.option_image:hover{
-    opacity:1;
+
+.option_image:hover {
+    opacity: 1;
 }
-.option_image p{
-    color:#A594F9;
-    font-size:16px;
-    margin-top:1rem;
+
+.option_image p {
+    color: #A594F9;
+    font-size: 16px;
+    margin-top: 1rem;
     pointer-events: none;
+}
+
+/* Tablet Responsiveness (768px to 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem 5rem;
+        width: 70%;
+    }
+
+    .result_img img {
+        width: 120px;
+    }
+
+    .option_image img {
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-text-color: #333333;
+            --secondary-text-color: #666666;
+            --accent-color: #1E90FF;
+            --accent-color-dark: #0056b3;
+            --padding-inline-section: 20px;
+        }
+        
+        body {
+            font-family: "Gowun Batang";
+            font-size: 19px;
+            color: var(--primary-text-color);
+        }
+        
+        p {
+            font-family: "DM Sans";
+            color: var(--secondary-text-color);
+            line-height: 1.4rem;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        ul {
+            list-style: none;
+            justify-content: space-around;
+        }
+        
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1180px;
+            margin-inline: auto;
+            overflow: hidden;
+        }
+        
+        nav {
+            background-color: #16325B;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            left: 0;
+            right: 0;
+        }
+        
+        .first-nav {
+            justify-content: space-between;
+            height: 15vh;
+            background-color: white;
+        }
+        
+        .main-nav {
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+        
+        .utilities {
+            width: 30%;
+            justify-content: center;
+            gap: 20%;
+        }
+        
+        .util {
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .util i {
+            color: #227B94;
+            position: relative;
+            top: -4px;
+            font-weight: 900;
+        }
+        
+        .util a {
+            font-size: 20px;
+            font-weight: 900;
+            color: #227B94;
+            transition: all ease 0.5s;
+        }
+        
+        .util:hover a,
+        .util:hover i {
+            color: #16325B;
+            /* Remember to add '#' for hex color values */
+        }
+        
+        .company {
+            width: 30%;
+        }
+        
+        .company img {
+            width: 50%;
+        }
+        
+        .nav-links {
+            width: 100%;
+        }
+        
+        .nav-links ul {
+            justify-items: space-between;
+        }
+        
+        .nav-links li {
+            color: white;
+        }
+        
+        .hover-link {
+            cursor: pointer;
+        }
+        
+        .hover-link:hover {
+            color: white;
+        }
+        
+        .hover-link:active {
+            color: #FFC107;
+        }
+        
+        .search-bar {
+            width: 30%;
+            height: 50px;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .search-bar input {
+            height: 100%;
+            width: 60%;
+            font-size: large;
+            box-shadow: 0px 0px 1px black;
+            padding: 10px;
+            font-family: "Gowun Batang";
+            color: #0056b3;
+        }
+        
+        .search-btn {
+            height: 100%;
+            font-size: large;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 24px;
+            border: none;
+            border-radius: 4px;
+            font-family: "DM Sans";
+            width: 30%;
+        }
+        
+        .search-btn:hover {
+            background-color: var(--accent-color-dark);
+        }
+        
+        main {
+            padding-block: 20px;
+            margin-top: 20vh;
+        }
+        
+        .cards-container {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            align-items: start;
+        }
+        
+        .card {
+            width: 360px;
+            min-height: 400px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #fff;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 1);
+            background-color: #f9fdff;
+            transform: translateY(-2px);
+        }
+        
+        .card-header img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 12px;
+        }
+        
+        .news-source {
+            margin-block: 12px;
+        }
+        
+        .jokes-container {
+            display: flex;
+            width: 100vw;
+            height: 70vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .joke {
+            background-color: #B7E0FF;
+            width: 50%;
+            height: 70%;
+            box-shadow: 10px 10px 40px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 100px;
+        }
+        
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            word-wrap: break-word;
+            margin: 30px 0;
+            line-height: 35px;
+            padding: 0 40px;
+        }
+        
+        #joke-btn {
+            display: block;
+            background-color: #03AED2;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Gowun Batang";
+        }
+        
+        .joke-go span p {
+            font-size: 50px;
+            text-align: left;
+        }
+        
+        .joke-go {
+            top: 87vh;
+            left: 1vw;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            position: fixed;
+            z-index: 1;
+        }
+        
+        .joke-go:hover {
+            transform-origin: left;
+            animation: userShake 0.7s ease infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes userShake {
+            50% {
+                transform: rotate(10deg);
+            }
+        }
+        
+        /* For devices with a width of 768px or less */
+        @media (max-width: 768px) {
+            .first-nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+        
+            .company img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        
+            .search-bar {
+                width: 100%;
+                margin-top: 10px;
+                justify-content: center;
+            }
+        
+            .search-bar input {
+                width: 70%;
+                margin-bottom: 10px;
+            }
+        
+            .search-btn {
+                width: 20%;
+            }
+        
+            .utilities {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+        
+            .main-nav .nav-links ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        
+            .cards-container {
+                justify-content: center;
+            }
+        
+            .card {
+                width: 90%; /* Adjusted width for better fit on smaller screens */
+                margin-bottom: 20px;
+            }
+        
+            .jokes-container {
+                flex-direction: column;
+                height: auto;
+            }
+        
+            .joke {
+                width: 90%;
+                height: auto;
+            }
+        
+            .joke span {
+                font-size: 50px;
+            }
+        
+            #joke-btn {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        
+        /* For devices with a width of 480px or less */
+        @media (max-width: 480px) {
+            .first-nav {
+                padding: 5px 0;
+            }
+        
+            .company img {
+                width: 70%;
+            }
+        
+            .search-bar input {
+                width: 90%;
+            }
+        
+            .search-btn {
+                width: 25%;
+            }
+        
+            .main-nav .nav-links ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .nav-links li {
+                margin-bottom: 10px;
+            }
+        
+            .card {
+                width: 100%;
+                margin-bottom: 20px; /* Added margin for spacing */
+            }
+        
+            .joke {
+                width: 100%;
+                padding: 10px;
+            }
+        
+            .joke span {
+                font-size: 40px;
+            }
+        
+            #joke-btn {
+                width: 100%;
+            }
+        }
+        
+
+    .option_images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .option_image img {
+        width: 20%;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+
+    .option_image p {
+        font-size: 12px;
+    }
 }
