@@ -74,3 +74,5 @@ async function getJoke() {
     
     });
   });
+  // Toggle Hamburger Menu
+
